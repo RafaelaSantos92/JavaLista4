@@ -2,30 +2,29 @@ package Familia51;
 
 public class Cachorro extends Animal {
 	
-	private String acao;
-	
-	
-	public Cachorro(String nome,int idade, String som, String acao)
+	public Cachorro()
 	{
-		
-		super(nome,idade,som);
-		this.acao = acao;
+		super("especie: Cachorro");
 		
 	}
-
-
-	public String getAcao() {
-		return acao;
+	@Override
+	public void nome(String nomeAnimal)
+	{
+		System.out.println("\nNome do cachorro: "+nomeAnimal);
 	}
-
-
-	public void setAcao(String acao) {
-		this.acao = acao;
+	@Override
+	public void idade(int idadeAnimal)
+	{
+		System.out.println("\nIdade do cachorro: "+idadeAnimal);
+	}
+	@Override
+	public void som(String somAnimal)
+	{
+		System.out.println("\nSom emitido pelo cachorro: "+somAnimal);
+	}
+	public void caracteristica()
+	{
+		System.out.println("\nUma das caracteristicas do cachorro Ã© correr!");
 	}
 	
-	public void imprimirCaracteristicas()
-	{
-		System.out.println("\nAnimal: "+getNome()+"\nidade: "+getIdade()+"\nSom emitido: "+getSom()+"\nAção esperada: "+acao);
-	}
-
 }
