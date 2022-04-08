@@ -2,26 +2,29 @@ package Familia51;
 
 public class Preguica extends Animal {
 	
-	public String acao;
+	public Preguica()
+	{
+		super("especie: Preguiça");
+		
+	}
+	@Override
+	public void nome(String nomeAnimal)
+	{
+		System.out.println("\nNome da preguiça: "+nomeAnimal);
+	}
+	@Override
+	public void idade(int idadeAnimal)
+	{
+		System.out.println("\nIdade da preguiça: "+idadeAnimal);
+	}
+	@Override
+	public void som(String somAnimal)
+	{
+		System.out.println("\nSom emitido pela preguiça: "+somAnimal);
+	}
+	public void caracteristica()
+	{
+		System.out.println("\nUma das caracteristicas da preguiça é subir em arvores!");
+	}
 	
-	public Preguica(String nome,int idade,String som,String acao)
-	{
-		super(nome,idade,som);
-		this.acao = acao;
-	}
-
-	public String getAcao() {
-		return acao;
-	}
-
-	public void setAcao(String acao) {
-		this.acao = acao;
-	}
-	public void imprimirCaracteristicas()
-	{
-		System.out.println("\nAnimal: "+getNome()+"\nidade: "+getIdade()+"\nSom emitido: "+getSom()+"\nA��o esperada: "+acao);
-	}
-
-
-
 }
